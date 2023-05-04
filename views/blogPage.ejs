@@ -1,0 +1,45 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+	<title>Node Authentication</title>
+    <!-- load bootstrap css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- load fontawesome -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body { padding-top:80px; word-wrap:break-word; }
+	</style>
+</head>
+<body>
+<main class="container">
+
+	<div class="page-header text-center">
+		<h1>Blog Page</h1>
+		<a href="/newpost" class="btn btn-primary btn-sm">Make a new Post</a>
+	</div>
+
+	<div class="row">
+
+		<!-- LOCAL INFORMATION -->
+		<div class="col-sm-6">
+			<div>
+				<% posts.forEach(function(post) { %>
+					<li>
+						<% if(null != post.imagePath != ""){ %>
+							<img src="../<%= post.imagePath %>" alt="">
+							<h1>../<%= post.imagePath %> </h1>
+						<% } %>
+					  <h2><%= post.title %></h2>
+					  <p><%= post.content %></p>
+					  <p><%= post.user_id %></p>
+					</li>
+				  <% }); %>
+			</div>
+		</div>
+
+	</div>
+
+</main>
+</body>
+</html>

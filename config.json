@@ -1,0 +1,5 @@
+{
+	"host": "localhost",
+	"port": 4000,
+	"mongodb": "mongodb+srv://ay_test:test@cluster0.ui6jl4j.mongodb.net/?retryWrites=true&w=majority"
+}
